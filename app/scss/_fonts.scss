@@ -1,1 +1,28 @@
-// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&display=swap"');
+// @import url();
+
+@font-face{
+  font-family: "GothamPro";
+  src: url('../fonts/GothamPro.eot');
+  src: url('../fonts/GothamPro.eot?iefix') format('eot'),
+  url('../fonts/GothamPro.woff') format('woff'),
+  url('../fonts/GothamPro.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: "GothamPro-Black";
+  src: url('../fonts/GothamPro-Black.eot');
+  src: url('../fonts/GothamPro-Black.eot?iefix') format('eot'),
+  url('../fonts/GothamPro-Black.woff') format('woff'),
+  url('../fonts/GothamPro-Black.ttf') format('truetype');
+}
+@font-face{
+  font-family: "A_Concepto";
+  src: url('../fonts/A_Concepto.eot');
+  src: url('../fonts/A_Concepto.eot?iefix') format('eot'),
+  url('../fonts/A_Concepto.woff') format('woff'),
+  url('../fonts/A_Concepto.woff2') format('woff2'),
+  url('../fonts/A_Concepto.ttf') format('truetype'),
+  url('../fonts/A_Concepto.svg#webfont') format('svg');
+}
+  

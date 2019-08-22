@@ -8,6 +8,8 @@
 *::before,
 *::after{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -23,7 +25,297 @@ img {
 	max-width: 100%;
 }
 .container{
-	width: 1200px;
+	width: 1420px;
 	margin: 0 auto;
-	padding: 0 15px;
+	// padding: 0 15px;
+}
+
+.header{
+  padding: 10px 0;
+  background-color: $black;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav{
+    padding: 0 11px;
+  }
+  &__list{
+    min-width: 513px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $baseFontFamily;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    list-style: none;
+  }
+  &__item{
+    &:first-child{
+      padding-right: 15px;
+      position: relative;
+      &:after{
+        content: url(../images/arrow_down.svg);
+        position: absolute;
+        right: -3px;
+        top: -2px;
+      }
+    }
+    // &:first-child .header__link{
+     
+      
+    // }
+  }
+  &__link{
+    text-decoration: none;
+    color: $menuColor;
+    position: relative;
+    // transition: all 1s ease;
+    &:hover{
+      color: $activeColor;
+      &::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #f6a947;
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+      }
+    }
+  }
+  &__phone{
+    text-decoration: none;
+    font-family: $baseFontFamily;
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.top{
+  background: url(../images/top-bg.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  &__slogan{
+    text-shadow: 0 1px 10px rgba(21, 21, 21, 0.14);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 200px;
+  }
+  &__title{
+    font-family: "GothamPro";
+    font-size: 40px;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: -15px;
+      left: 0;
+      background-color: $activeColor;
+    }
+
+    &-before{
+      font-family: "GothamPro-Black";
+      font-size: 70px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-right: 50px;
+    }
+    &-after{
+      font-size: 60px;
+      font-family: "GothamPro-Black";
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+
+.goods{
+  padding: 100px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__text{
+    width: 425px;
+    font-family: "A_Concepto";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+    text-transform: uppercase;
+    padding-top: 70px;
+    & span{
+      padding-bottom: 50px;
+      border-bottom: 3px solid $activeColor;
+    }
+  }
+  &__icon{
+    position: relative;
+    margin-bottom: 30px;
+    &::before{
+      position: absolute;
+      z-index: -1;
+      right: -7px;
+      bottom: -7px;
+    }
+  }
+  &__products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 816px;
+    &-inner{
+      margin-right: 50px;
+    }
+    &-item{
+      width: 270px;
+      height: 194px;
+      padding: 45px 0 45px 25px;
+      display: flex;
+      transition: all 1s ease;
+
+      &_grains{
+        border-bottom: 2px solid $borderColor;
+        border-right: 2px solid $borderColor;
+        & .goods__icon{
+          width: 67px;
+          height: 75px;
+          &::before{
+            content: url(../images/Icon/wheat_g.svg);
+            width: 72px;
+            height: 82px;
+          }
+        }
+      }
+
+      &:hover{
+        transform: scale(1.1);
+        background: url(../images/hover-bg.png);
+        & .goods__name{
+          color: $white;
+        }
+        & .goods__icon::before{
+          // content: url(../images/Icon/wheat_white.svg);
+          width: 72px;
+          height: 82px;
+        }
+      }
+
+      &_seeds{
+        border-bottom: 2px solid $borderColor;
+        border-right: 2px solid $borderColor;
+        & .goods__icon{
+          width: 54px;
+          height: 73px;
+          &::before{
+            content: url(../images/Icon/sprout_g.svg);
+            width: 59px;
+            height: 79px;
+          }
+        }
+      }
+      &_oil{
+        border-bottom: 2px solid $borderColor;
+        & .goods__icon{ 
+          width: 59px;
+          height: 76px;
+          &::before{
+            content: url(../images/Icon/sunflower_g.svg);
+            width: 63px;
+            height: 81px;
+          }
+        }
+      }
+      &_pulses{
+        border-right: 2px solid $borderColor;
+        & .goods__icon{  
+          width: 69px;
+          height: 69px;
+          &::before{
+            content: url(../images/Icon/peas_g.svg);
+            width: 73px;
+            height: 73px;
+          }
+        }
+      }
+      &_animal{
+        border-right: 2px solid $borderColor;
+        & .goods__icon{ 
+          width: 91px;
+          height: 61px;
+          &::before{
+            content: url(../images/Icon/cow_g.svg);
+            width: 95px;
+            height: 64px;
+          }
+        }
+      }
+      &_retail {
+        & .goods__icon{
+          width: 74px;
+          height: 62px;
+          &::before{
+            content: url(../images/Icon/shopping-cart_g.svg);
+            width: 77px;
+            height: 64px;
+          }
+        }
+      }
+    }
+  }
+
+  &__name{
+    font-family: $baseFontFamily;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  &__list{
+    &-item{
+      margin-bottom: 5px;
+      font-family: $baseFontFamily;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: underline;
+      line-height: 16px;
+      position: relative;
+      &::before{
+        content: url(../images/disc.svg);
+        position: absolute;
+        left: -7px;
+        top: -2px;
+      }
+      & a{
+        color: red;
+      }
+    }
+  }
+  &__title{
+    opacity: 0.05;
+    color: $mainColor;
+    font-size: 118px;
+    font-weight: 400;
+    line-height: 48px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -88px;
+    left: -100px;
+  }
 }

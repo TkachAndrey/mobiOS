@@ -1,2 +1,5 @@
 # folder with models
 node_modules/
+
+# psd files
+psd/*.psd
