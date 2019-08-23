@@ -70,9 +70,9 @@ gulp.task('export', function(){
     .pipe(gulp.dest('dist/css'));
   let buildJS = gulp.src('app/js/*.js')
     .pipe(gulp.dest('dist/js'));
-  let buildFONTS = gulp.src('app/font s/*.*')
+  let buildFONTS = gulp.src('app/fonts/*.*')
     .pipe(gulp.dest('dist/fonts'));
-  let buildIMG = gulp.src('app/images/*.*')
+  let buildIMG = gulp.src('app/images/**/*.*')
     .pipe(gulp.dest('dist/images'));
 });
 
