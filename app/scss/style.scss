@@ -74,9 +74,12 @@ img {
     color: $menuColor;
     position: relative;
     // transition: all 1s ease;
-    &_products:hover .header__dropdown{
-      display: flex;
-    }
+
+    // &_products:hover .header__dropdown{
+    //   visibility: visible;
+    //   opacity: 1;
+    //   display: flex;
+    // }
     &:hover{
       color: $activeColor;
       &::after{
@@ -105,9 +108,11 @@ img {
     position: absolute;
     // **************************************************
     top: 110%;
-    // display: none;
+    // visibility: hidden;
+    // opacity: 0;
+    display: none;
     transform: tranlateY(100%);
-    display: flex;
+    // display: flex;
     
     justify-content: space-between;
     z-index: 7;
@@ -205,7 +210,6 @@ img {
   }
   &__text{
     width: 440px;
-    // flex-basis: 45%;
     font-family: "A_Concepto";
     font-size: 48px;
     line-height: 48px;
@@ -219,6 +223,7 @@ img {
   &__icon{
     position: relative;
     margin-bottom: 30px;
+    margin-top: 25px;
     &::before{
       position: absolute;
       z-index: -1;
@@ -227,19 +232,18 @@ img {
     }
   }
   &__products{
-    display: flex;
-    flex-wrap: wrap;
-    width: 816px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     position: relative;
     &-inner{
       margin-right: 30px;
     }
     &-item{
-      width: 270px;
+      width: 300px;
       padding: 45px 20px 45px 25px;
       display: flex;
       transition: all 1s ease;
-
       &:hover{
         transform: scale(1.1);
         outline: none;
@@ -247,14 +251,13 @@ img {
         & .goods__name{
           color: $white;
         }
-        // & .goods__icon::before{
-        // }
         & .goods__list{
           opacity: 1;
         }
       }
 
       &_grains{
+        grid-column: 1/2;
         & .goods__icon{
           width: 67px;
           height: 75px;
@@ -264,8 +267,17 @@ img {
             height: 82px;
           }
         }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/wheat_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
+          }
+        }
       }
       &_seeds{
+        grid-column: 2/3;
         & .goods__icon{
           width: 54px;
           height: 73px;
@@ -275,8 +287,18 @@ img {
             height: 79px;
           }
         }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/sprout_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
+          }
+        }
       }
       &_oil{
+        grid-column: 3/4;
+        grid-row: 1/2;
         & .goods__icon{ 
           width: 59px;
           height: 76px;
@@ -286,8 +308,18 @@ img {
             height: 81px;
           }
         }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/sunflower_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
+          }
+        }
       }
       &_pulses{
+        grid-column: 1/2;
+        grid-row: 2/3;
         & .goods__icon{  
           width: 69px;
           height: 69px;
@@ -297,8 +329,18 @@ img {
             height: 73px;
           }
         }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/peas_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
+          }
+        }
       }
       &_animal{
+        grid-column: 2/3;
+        grid-row: 2/3;
         & .goods__icon{ 
           width: 91px;
           height: 61px;
@@ -306,6 +348,14 @@ img {
             content: url(../images/Icon/cow_g.svg);
             width: 95px;
             height: 64px;
+          }
+        }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/cow_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
           }
         }
       }
@@ -317,6 +367,15 @@ img {
             content: url(../images/Icon/shopping-cart_g.svg);
             width: 77px;
             height: 64px;
+          }
+          
+        }
+        &:hover{
+          & .goods__icon::before{
+            content: url(../images/Icon/shopping-cart_white.svg);
+            z-index: 3;
+            right: 7px;
+            bottom: 7px;
           }
         }
       }
@@ -331,7 +390,7 @@ img {
   }
   
   &__list{
-    // opacity: 0;
+    opacity: 0;
     &-item{
       margin-bottom: 5px;
       font-family: $baseFontFamily;
@@ -348,14 +407,12 @@ img {
       }
       & a{
         color: $white;
-        color: $black;
       }
     }
   }
   &__lines{
-    // position: absolute;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    min-width: 100%;
     height: 2px;
     top: 50%;
     background-color: $borderColor;
@@ -364,9 +421,19 @@ img {
       position: absolute;
       display: block;
       width: 2px;
-      height: 580px;
-      top: -300px;
-      left: 380px;
+      height: 490px;
+      top: -245px;
+      left: 300px;
+      background-color: $borderColor;
+    }
+    &::after{
+      content:"";
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 490px;
+      top: -245px;
+      right: 300px;
       background-color: $borderColor;
     }
   }
@@ -388,6 +455,167 @@ img {
 /////////////////////////////////////////////////////////
 
 .work{
+  padding-top: 60px;
+  // padding: 60px 0 70px;
   background-color: $bgGrey;
-  height: 200px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__process{
+    padding-top: 35px;
+  }
+  &__title{
+    color: $mainColor;
+    font-family: "A_Concepto";
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+  &__steps{
+    display: grid;
+    grid-columns: 1fr 1fr 1fr 1fr;
+    grid-rows: 1fr 1fr;
+    &-item{
+      width: 160px;
+      padding-right: 55px;
+      padding-bottom: 70px;
+      position: relative;
+      &_1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      &_2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      &_3{
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+      &_4{
+        grid-column: 4/5;
+        grid-row: 1/2;
+        & .work__steps-circle{
+          &::after{
+            content: "";
+          }
+        }
+      }
+      &_5{
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      &_6{
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      &_7{
+        grid-column: 3/4;
+        grid-row: 2/3;
+      }
+    }
+    
+    &-link{
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 35px;
+      color: $mainColor;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 5;
+      border-radius: 50%;
+      &:hover{
+        background-color: $activeColor;
+        transform: scale(1.3);
+        & .work__circle{
+          transform: scale(1.5);
+        }
+      }
+    }
+    &-text{
+      color: $mainColor;
+      font-family: $baseFontFamily;
+      font-weight: 500;
+      line-height: 16px;
+    }
+    &-circle{
+      width: 36px;
+      height: 36px;
+      border: 1px solid $roundColor;
+      border-top: 0;
+      border-right: 0;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &::after{
+        content: url(../images/dotted-line.png);
+        position: absolute;
+        right: -95px;
+        top: 5px;
+      }
+    }
+  }
+}
+
+.slider{
+  margin-bottom: -40px;
+  margin-left: -40px;
+}
+.slide{
+  &__item{
+    position: relative;
+    & img{
+      vertical-align: baseline;
+    }
+  }
+  &__description{
+    color: $white;
+    font-family: $baseFontFamily;
+    padding: 20px 144px 35px 35px;
+    position: absolute;
+    left: -17px;
+    bottom: 0;
+    background: url(../images/bg-colored.png) no-repeat;
+    &::after{
+      content: url(../images/corner.svg);
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  &__text{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &__dots{
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    position: absolute;
+    bottom: 15px;
+    z-index: 5;
+    &-item{
+      width: 7px;
+      height: 7px;
+      border: 1px solid $white;
+      &_active{
+        background-color: $white;
+      }
+    }
+  }
 }
