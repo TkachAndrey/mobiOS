@@ -1,9 +1,27 @@
 $(function(){
-  $('.header__link_products').mouseenter(function () {
-    $('.header__dropdown').css('display', 'flex');
+
+  $('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    dots: true,
+    customPaging: function(slider, i) {
+      return "";
+      // <a href="#!" class="slider__dots-item"></a>
+    },
+    asNavFor: '.work__steps'
   });
-  $('.header__link_products', '.header__dropdown').mouseout(function () {
-    $('.header__dropdown').css('display', 'none');
-});
- 
+  $('.work__steps').slick({
+    slidesToShow: 7,
+    arrows: false,
+    // slidesToScroll: 0,
+    asNavFor: '.slider',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+  $('.slider .slick-dots li').addClass('slider__dots-item'); //  Add class to "li"
+
 });

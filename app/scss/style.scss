@@ -36,7 +36,7 @@ img {
   padding: 10px 0;
   background-color: $black;
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   width: 100%;
   &__inner{
     display: flex;
@@ -57,32 +57,27 @@ img {
     text-transform: uppercase;
     list-style: none;
   }
-  &__item{
-    &:first-child{
-      padding-right: 15px;
-      position: relative;
-      &:after{
-        content: url(../images/arrow_down.svg);
-        position: absolute;
-        right: -3px;
-        top: -2px;
-      }
-    }
-  }
+
   &__link{
     text-decoration: none;
     color: $menuColor;
     position: relative;
-    // transition: all 1s ease;
-
-    // &_products:hover .header__dropdown{
-    //   visibility: visible;
-    //   opacity: 1;
-    //   display: flex;
-    // }
+    &_products{
+      & span{
+        font-size: 8px;
+        position: absolute;
+        top: 8px;
+        right: -15px;
+      }
+      &:hover + ul.header__dropdown{
+        opacity: 1;
+        z-index: 5;
+        visibility: visible;
+      }
+    }
     &:hover{
       color: $activeColor;
-      &::after{
+      &::before{
         content: "";
         width: 100%;
         height: 3px;
@@ -102,20 +97,19 @@ img {
   }
 
   &__dropdown{
+    transition: all 1s ease;
     background-color: $white;
     padding: 25px;
-    width: 100%;
     position: absolute;
-    // **************************************************
-    top: 110%;
-    // visibility: hidden;
-    // opacity: 0;
-    display: none;
-    transform: tranlateY(100%);
-    // display: flex;
-    
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    display: flex;
     justify-content: space-between;
-    z-index: 7;
     &-title{
       color: $mainColor;
       font-family: $baseFontFamily;
@@ -155,15 +149,18 @@ img {
 //////////////////////////////////////////////////////
 
 .top{
-  background: url(../images/top-bg.jpg) no-repeat center;
+  background: url(../images/top-bg.webp) no-repeat center;
   background-size: cover;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
   &__slogan{
     text-shadow: 0 1px 10px rgba(21, 21, 21, 0.14);
     color: $white;
     font-weight: 400;
     text-align: center;
-    padding-top: 200px;
+    // padding-top: 200px;
+    // transform: translateY(200%);
   }
   &__title{
     font-family: "GothamPro";
@@ -456,8 +453,10 @@ img {
 
 .work{
   padding-top: 60px;
-  // padding: 60px 0 70px;
   background-color: $bgGrey;
+  // position: relative;
+  // position: static;
+  // z-index: -1;
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -482,6 +481,12 @@ img {
       padding-right: 55px;
       padding-bottom: 70px;
       position: relative;
+      &::after{
+        content: url(../images/dotted-line.png);
+        position: absolute;
+        right: 30px;
+        top: 5px;
+      }
       &_1{
         grid-column: 1/2;
         grid-row: 1/2;
@@ -497,10 +502,8 @@ img {
       &_4{
         grid-column: 4/5;
         grid-row: 1/2;
-        & .work__steps-circle{
-          &::after{
-            content: "";
-          }
+        &::after{
+          content: "";
         }
       }
       &_5{
@@ -514,6 +517,9 @@ img {
       &_7{
         grid-column: 3/4;
         grid-row: 2/3;
+        &::after{
+          content: "";
+        }
       }
     }
     
@@ -533,9 +539,22 @@ img {
       border-radius: 50%;
       &:hover{
         background-color: $activeColor;
-        transform: scale(1.3);
-        & .work__circle{
-          transform: scale(1.5);
+        color: $white;
+        & + .work__steps-circle{
+          width: 50px;
+          height: 50px;
+          margin-left: -7px;
+          margin-top: -7px;
+        }
+      }
+      &_active{
+        background-color: $activeColor;
+        color: $white;
+        & + .work__steps-circle{
+          width: 50px;
+          height: 50px;
+          margin-left: -7px;
+          margin-top: -7px;
         }
       }
     }
@@ -548,30 +567,72 @@ img {
     &-circle{
       width: 36px;
       height: 36px;
-      border: 1px solid $roundColor;
-      border-top: 0;
-      border-right: 0;
+      border: 2px solid $roundColor;
       border-radius: 50%;
       position: absolute;
       top: 0;
       left: 0;
-      &::after{
-        content: url(../images/dotted-line.png);
-        position: absolute;
-        right: -95px;
-        top: 5px;
+      right: 0;
+      bottom: 0;
+      animation: spiner 1s linear infinite;
+      &_1{
+        border-top: 0;
+        border-right: 0;
+      }
+      &_2{
+        border-bottom: 0;
+        border-right: 0;
+      }
+      &_3{
+        border-bottom: 0;
+        border-left: 0;
+      }
+      &_4{
+        border-top: 0;
+        border-left: 0;
+      }
+      &_5{
+        border-bottom: 0;
+        border-left: 0;
+      }
+      &_6{
+        border-bottom: 0;
+        border-right: 0;
+      }
+      &_7{
+        border-top: 0;
+        border-right: 0;
       }
     }
+  }
+  &__demo{
+    position: relative;
+    z-index: 1;
   }
 }
 
 .slider{
   margin-bottom: -40px;
   margin-left: -40px;
+  width: 695px;
+  &__panel{
+    position: absolute;
+    bottom: -40px;
+    left: -57px;
+    z-index: 5;
+    opacity: 0.7;
+    &::after{
+      content: url(../images/corner.svg);
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+  }
 }
 .slide{
   &__item{
     position: relative;
+    // z-index: 5;
     & img{
       vertical-align: baseline;
     }
@@ -583,13 +644,8 @@ img {
     position: absolute;
     left: -17px;
     bottom: 0;
-    background: url(../images/bg-colored.png) no-repeat;
-    &::after{
-      content: url(../images/corner.svg);
-      position: absolute;
-      top: -15px;
-      left: 0;
-    }
+    z-index: 7;
+    opacity: 1;
   }
   &__title{
     font-size: 20px;
@@ -602,20 +658,41 @@ img {
     font-weight: 500;
     line-height: 16px;
   }
-  &__dots{
+}
+
+.slick{
+  &-dots{
     display: flex;
     justify-content: space-between;
     width: 110px;
     position: absolute;
     bottom: 15px;
-    z-index: 5;
+    left: 40px;
+    z-index: 6;
+    &-active{
+      background-color: red;
+      border: 1px solid red;
+    }
     &-item{
+      display: inline-block;
       width: 7px;
       height: 7px;
-      border: 1px solid $white;
-      &_active{
-        background-color: $white;
-      }
+      border: 1px solid red;
+      // &_active{
+      //   background-color: $white;
+      // }
     }
   }
+}
+
+
+@keyframes spiner{
+  100% {transform: rotate(360deg);}
+}
+
+.slick-dots li.slick-active{
+  
+}
+.slick-dots li.slider__dots-item{
+
 }
