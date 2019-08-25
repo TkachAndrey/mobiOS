@@ -4,24 +4,27 @@ $(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: true,
+    fade: true, 
     dots: true,
-    customPaging: function(slider, i) {
-      return "";
-      // <a href="#!" class="slider__dots-item"></a>
-    },
-    asNavFor: '.work__steps'
-  });
-  $('.work__steps').slick({
-    slidesToShow: 7,
-    arrows: false,
-    // slidesToScroll: 0,
-    asNavFor: '.slider',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true
+    asNavFor: '.work__steps',
+    customPaging : function() {
+      return '<button class="slider__dots-item"></button>';
+    }
   });
 
-  $('.slider .slick-dots li').addClass('slider__dots-item'); //  Add class to "li"
+  $('.work__steps').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.slider',
+    // fade: true, 
+    // dots: true,
+    // centerMode: true,
+    focusOnSelect: true
+    // customPaging : function(slider, i) {
+    //   var thumb = $(slider.$slides[i]).data('image');
+    //   return '<a href="#"><img src="'+thumb+'"></a>';
+    // }
+  });
 
 });
