@@ -1,0 +1,129 @@
+.global{
+  padding-top: 150px;
+  &__title{
+    color: $mainColor;
+    font-family: "A_Concepto";
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &__points{
+    & #Russia:checked ~.global__map-marker{
+      top: 170px;
+      left: 250px;
+    }
+    & 
+    & #Moldova:checked ~.global__map-marker{
+      top: 230px;
+      left: 768px;
+    }
+    & #Kazakhstan:checked ~.global__map-marker{
+      top: 225px;
+      left: 925px;
+    }
+    & #Spain-O:checked ~.global__map-marker{
+      top: 255px;
+      left: 635px;
+    }
+  }
+  &__map{
+    position: relative;
+    &-marker{
+      width: 20px;
+      position: absolute;
+      left: 780px;
+      top: 225px;
+      transition: all ease 2s;
+    }
+  }
+}
+
+.countries{
+  background-color: $bgGrey;
+  padding: 50px 0;
+  &__inner{
+    display: flex;
+    & li{
+      font-size: 14px;
+      font-weight: 500;
+      padding-left: 12px;
+      margin-right: 30px;
+      position: relative;
+      cursor: pointer;
+      & label{
+        cursor: pointer;
+      }
+      &::before{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $activeColor;
+        position: absolute;
+        left: 0;
+        top: 3px;
+      }
+      &.countries__customers-item{
+        &::before{
+          background-color: $greenList;
+        }
+      }
+      &:hover{
+        color: $activeColor;
+        &::before{
+          background-color: red;
+        }
+      }
+      &:checked{
+        color: $activeColor;
+        &::before{
+          background-color: red;
+        }
+      }
+    }
+  }
+  &__origin{
+    padding: 13px 25px;
+    border-left: 6px solid $activeColor;
+    &-title{
+      color: $mainColor;
+      font-family: $baseFontFamily;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    &-list{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 25px;
+    }
+  }
+  &__customers{
+    padding: 13px 25px;
+    border-left: 6px solid $greenList;
+    &-title{
+      color: $mainColor;
+      font-family: $baseFontFamily;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    &-list{
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 25px;
+    }
+  }
+}
+
+input[type="radio"] #Canada:checked ~.global__map-marker{
+  top: 175px;
+  left: 815px;
+}
