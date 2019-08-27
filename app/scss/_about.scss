@@ -1,0 +1,148 @@
+.about{
+  padding: 105px 0;
+  background: url(../images/about-bg.webp);
+  background-size: cover;
+  &__inner{
+    padding: 0 160px;
+    display: flex;
+    justify-content: stretch;
+  }
+  &__years{
+    border: 2px solid $activeColor;
+    position: relative;
+    width: 110px;
+    & p{
+      position: absolute;
+      top: 200px;
+      left: -82px;
+      width: 215px;
+      height: 30px;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+      color: $white;
+      font-family: $baseFontFamily;
+      font-size: 24px;
+      font-weight: 700;
+      transform: rotate(-90deg);
+    }
+  }
+  
+  &__group{
+    position: relative;
+    padding: 42px 0 42px 30px;
+    margin-right: 120px;
+    &-item{
+      margin-bottom: 15px;
+      color: $white;
+      font-family: $baseFontFamily;
+      font-size: 35px;
+      font-weight: 700;
+      position: relative;
+      &::before{
+        font-size: 16px;
+        font-weight: 500;
+        position: absolute;
+      }
+      &::after{
+        position: absolute;
+      }
+      &_mt{
+        padding-bottom: 20px;
+        &::before{
+          content: "mt";
+          bottom: 0;
+          left: 0;
+        }
+        &::after{
+          content: url(../images/line-mt.svg);
+          bottom: -13px;
+          left: 58px;
+        }
+      }
+      &_countries{
+        padding-right: 50px;
+        margin-left: 125px;
+        &::before{
+          content: "countries";
+          bottom: 3px;
+          left: 50px;
+        }
+        &::after{
+          content: url(../images/line-countries.svg);
+          bottom: -17px;
+          right: 50px;
+        }
+      }
+      &_fcls{
+        padding-top: 20px;
+        &::before{
+          content: "fcls";
+          top: 0;
+          left: 0;
+        }
+        &::after{
+          content: url(../images/line-fcls.png);
+          bottom: 5px;
+          left: 65px;
+        }
+      }
+      &_deals{
+        margin-left: 157px;
+        padding-bottom: 22px;
+        padding-right: 20px;
+        &::before{
+          content: "deals";
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &_clients{
+        padding-bottom: 20px;
+        &::before{
+          content: "clients";
+          bottom: 0;
+          left: 0;
+        }
+        &::after{
+          content: url(../images/line-clients.svg);
+          top: -15px;
+          right: 55px;
+        }
+      }
+    }
+  }
+  &__equis{
+    padding: 20px 15px 15px 0;
+    &-title{
+      color: $white;
+      font-family: "A_Concepto";
+      font-size: 48px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 75px;
+    }
+    &-text{
+      margin-left: 122px;
+      & p{
+        color: $white;
+        font-family: $baseFontFamily;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 35px;
+      }
+    }
+    &-link{
+      color: $activeColor;
+      font-size: 14px;
+      font-weight: 700;
+      position: relative;
+      text-decoration: none;
+      &::after{
+        content: url(../images/arrow-right.png);
+        position: absolute;
+        right: -33px;
+        top: 3px;
+      }
+    }
+  }
+}

@@ -17,14 +17,8 @@ $(function(){
     slidesToScroll: 1,
     arrows: false,
     asNavFor: '.slider',
-    // fade: true, 
-    // dots: true,
-    // centerMode: true,
     focusOnSelect: true
-    // customPaging : function(slider, i) {
-    //   var thumb = $(slider.$slides[i]).data('image');
-    //   return '<a href="#"><img src="'+thumb+'"></a>';
-    // }
   });
+
 
 });

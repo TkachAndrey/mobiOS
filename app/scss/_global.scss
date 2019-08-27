@@ -9,33 +9,33 @@
     margin-bottom: 80px;
     text-align: center;
   }
-  &__points{
-    & #Russia:checked ~.global__map-marker{
-      top: 170px;
-      left: 250px;
-    }
-    & 
-    & #Moldova:checked ~.global__map-marker{
-      top: 230px;
-      left: 768px;
-    }
-    & #Kazakhstan:checked ~.global__map-marker{
-      top: 225px;
-      left: 925px;
-    }
-    & #Spain-O:checked ~.global__map-marker{
-      top: 255px;
-      left: 635px;
-    }
-  }
   &__map{
     position: relative;
     &-marker{
       width: 20px;
       position: absolute;
-      left: 780px;
-      top: 225px;
+      // left: 780px;
+      // top: 225px;
       transition: all ease 2s;
+    }
+  }
+  &__points{
+    & #Ukraine:checked ~ .global__map-marker{
+      top: 170px;
+      left: 250px;
+      border: 1px solid red;
+    }
+    & input#Moldova:checked ~ .global__map-marker{
+      top: 230px;
+      left: 768px;
+    }
+    & input#Kazakhstan:checked ~ .global__map-marker{
+      top: 225px;
+      left: 925px;
+    }
+    & input#Spain-O:checked ~ .global__map-marker{
+      top: 255px;
+      left: 635px;
     }
   }
 }
@@ -121,9 +121,4 @@
       grid-row-gap: 25px;
     }
   }
-}
-
-input[type="radio"] #Canada:checked ~.global__map-marker{
-  top: 175px;
-  left: 815px;
 }

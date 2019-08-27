@@ -238,7 +238,7 @@
               </div>
             </div>
             <div class="slide__item">
-              <img src="images/wheat.webp" alt="">
+              <img src="images/slide1.jpg" alt="">
               <div class="slide__description">
                 <div class="slide__title">Delivery to the warehouse</div>
                 <div class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor velit
@@ -338,7 +338,7 @@
     <div class="container">
       <div class="global__title">Our global trade</div>
       <div class="global__points">
-        <input type="radio" name="country" id="Ukraine">
+        <input type="radio" name="country" id="Ukraine" checked="checked">
         <input type="radio" name="country" id="Russia">
         <input type="radio" name="country" id="Canada">
         <input type="radio" name="country" id="Moldova">
@@ -363,12 +363,14 @@
         <input type="radio" name="country" id="UAE">
         <input type="radio" name="country" id="Indonesia">
       </div>
+
       <div class="global__map">
         <img src="images/map.svg" alt="">
         <div class="global__map-marker">
           <img src="images/map-marker.svg" alt="">
         </div>
       </div>
+
     </div>
   </section>
 
@@ -413,8 +415,121 @@
     </div>
   </section>
 
+  <section class="about">
+    <div class="container">
+      <div class="about__inner">
+
+        <div class="about__years">
+          <p>Shipped in 3 years</p>
+        </div>
+
+        <div class="about__group">
+          <div class="about__group-item about__group-item_mt">15 700</div>
+          <div class="about__group-item about__group-item_countries">20</div>
+          <div class="about__group-item about__group-item_fcls">627</div>
+          <div class="about__group-item about__group-item_deals">178</div>
+          <div class="about__group-item about__group-item_clients">53</div>
+        </div>
+
+        <div class="about__equis">
+          <div class="about__equis-title">About equis</div>
+          <div class="about__equis-text">
+            <p>We are a leading global Agri-Commodity trading and processing company specializing in the physical
+              trading of various agricultural commodities such as pulses, wheat, rice, oilseeds, sugar, cotton and
+              edible nuts.</p>
+            <p>Agrocorp’s beginnings can be traced back to 1990, where we operated from shared office spaces in
+              Singapore trading mono-sodium glutamate and galvanised iron to Myanmar with a startup capital of
+              SGD25,000.</p>
+            <a href="#!" class="about__equis-link">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback">
+    <div class="container">
+      <div class="feedback__title">feedback</div>
+      <p class="feedback__text">For more information, leave a request and we will contact you</p>
+      <div class="feedback__inner">
+        <div class="feedback__form">
+          <form class="form">
+            <p>Your information:</p>
+            <div class="form__info">
+              <input type="text" placeholder="Company name">
+              <input type="tel" placeholder="Your phone">
+              <input type="text" placeholder="Your name">
+              <input type="email" placeholder="Your e-mail">
+            </div>
+
+            <p>What you need?</p>
+            <div class="form__needs">
+              <select name="product" class="form__needs-list form__needs-list_products">
+                <option disable>Choose type of product</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <label for="quantity"><input type="number" id="quantity" placeholder="Quantity">mt</label>
+              <select name="delivery" class="form__needs-list form__needs-list_delivery">
+                <option disable>Delivery type</option>
+                <option value="Truck">Truck</option>
+                <option value="container_20ft">container 20ft</option>
+                <option value="container_40ft">container 40ft</option>
+              </select>
+              <select name="packing" class="form__needs-list form__needs-list_packing">
+                <option disable>Packing type</option>
+                <option value="bulk">bulk</option>
+                <option value="PP_bags_25kg">PP bags 25kg</option>
+                <option value="PP_bags_50kg">PP bags 50kg</option>
+                <option value="big bags">big bags</option>
+              </select>
+            </div>
+            <p>Delivery terms</p>
+            <div class="form__delivery">
+              <label for="FCA"><input type="radio" name="delivery" id="FCA"><span>FCA</span></label>
+              <label for="DAP"><input type="radio" name="delivery" id="DAP"><span></span>DAP</span></label>
+              <label for="FOB"><input type="radio" name="delivery" id="FOB"><span></span>FOB</span></label>
+              <label for="CFR"><input type="radio" name="delivery" id="CFR"><span></span>CFR</span></label>
+            </div>
+            <input type="text" placeholder="Delivery place" class="form__delivery-place">
+            <input type="text" placeholder="Port name" class="form__delivery-port">
+            <textarea placeholder="Additional information"></textarea>
+            <input type="submit" value="submit" class="form__submit">
+          </form>
+        </div>
+        <div class="feedback__image">
+          <img src="images/feedback-img.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="footer__nav">
+        <div class="footer__logo"></div>
+        <nav class="footer__menu">
+          <a href="#!">services</a>
+          <a href="#!">about us</a>
+          <a href="#!">contacts</a>
+        </nav>
+        <div class="footer__contacts">
+          <a href="tel:380630563443" class="footer__tel"></a>
+          <a href="mailto:pereezd@prostopereezd.com" class="footer__email">pereezd@prostopereezd.com</a>
+          <div class="footer__social">
+            <a href="#!" class="footer__social-facebook"></a>
+            <a href="#!" class="footer__social-instagram"></a>
+            <a href="#!" class="footer__social-twitter"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="js/jquery.mapael.min.js"></script> -->
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>
