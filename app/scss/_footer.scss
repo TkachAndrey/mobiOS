@@ -1,0 +1,92 @@
+.footer{
+  background-color: $mainColor;
+  padding: 50px 0 35px;
+  color: $white;
+  & a{
+    text-decoration: none;
+    color: $white;
+    &:hover{
+      color: $activeColor;
+    }
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 42px;
+  }
+  &__menu{
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__contacts{
+    text-align: right;
+  }
+  &__tel{
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__email{
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__social{
+    &-item{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+      &_facebook{
+        margin-left: 0;
+      }
+      & svg .st0{
+        fill: $white;
+      }
+      &:hover svg .st0{
+        fill: #f6a947;
+      }
+    }
+  }
+  &__products{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    &-title{
+      color: $white;
+      font-family: $baseFontFamily;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    &-list{
+      &_item{
+        padding-left: 12px;
+        margin-bottom: 12px;
+        position: relative;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $activeColor;
+        }
+        &:hover::before{
+          background-color: red;
+        }
+      }
+    }
+  }
+  &__copy{
+    text-align: center;
+    & a{
+      color: $activeColor;
+      text-decoration: none;
+    }
+  }
+}

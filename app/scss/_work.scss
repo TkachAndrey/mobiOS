@@ -3,6 +3,7 @@
   background-color: $bgGrey;
   &__inner{
     display: flex;
+    justify-content: space-between;
   }
   &__demo{
     & .slick-dots{
@@ -192,7 +193,6 @@
 }
 .slider{
   margin-bottom: -40px;
-  margin-left: -55px;
   width: 712px;
 }
 .slide{

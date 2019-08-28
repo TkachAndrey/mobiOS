@@ -19,6 +19,24 @@ $(function(){
     asNavFor: '.slider',
     focusOnSelect: true
   });
+  // ///////////////////////////////
+  // $(".form__needs-list_products").chosen({
+  //   placeholder_text_multiple: "Select an Option"
+  // });
+
+  // //////////////////////////////
+  $('#FCA').on('change', function() {
+    $('#portName').attr("placeholder", "Port name").removeAttr("disabled");
+  });
+  $('#DAP').on('change', function() {
+    $('#portName').attr("placeholder", "Port name").removeAttr("disabled");
+  });
+  $('#FOB').on('change', function() {
+    $('#portName').attr("placeholder", "Delivery place").removeAttr("disabled");
+  });
+  $('#CFR').on('change', function() {
+    $('#portName').attr("placeholder", "Delivery place").removeAttr("disabled");
+  });
 
 
 });

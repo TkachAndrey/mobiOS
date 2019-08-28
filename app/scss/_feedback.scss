@@ -39,6 +39,12 @@
     display: flex;
     justify-content: space-between;
   }
+  &__image{
+    width: 655px;
+    & img{
+      box-shadow: 0 0 21px rgba(0, 0, 0, 0.23);
+    }
+  }
 }
 .form{
   width: 695px;
@@ -58,6 +64,14 @@
     font-weight: 700;
     margin-bottom: 10px;
   }
+  & select{
+    appearance: none;
+    cursor: pointer;
+    background: url(../images/green-arrow.svg) no-repeat 97% center;
+    &.form__needs-list_delivery{
+      background-position-x: 94%;
+    }
+  }
   &__info{
     display: flex;
     justify-content: space-between;
@@ -68,7 +82,7 @@
     }
   }
   &__needs{
-    width: 483px;
+    width: 482px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -89,9 +103,11 @@
       }
       &_delivery{
         width: 150px;
+        height: 40px;
       }
       &_packing{
        width: 314px;
+       height: 40px;
       }
       
     }
@@ -107,12 +123,13 @@
     }
     & label{
       margin-bottom: 20px;
-      & input{
+      & input[type="number"]{
         margin-right: 10px;
         width: 90px;
+        padding-right: 0;
+        appearance: none;
       }
     }
-    
   }
   &__delivery{
     width: 483px;
@@ -121,12 +138,34 @@
     margin-bottom: 20px;
     & label{
       margin-right: 66px;
-      & span{
-        padding-left: 10px;
-        color: $mainColor;
-        font-family: $baseFontFamily;
-        font-size: 14px;
-        font-weight: 500;
+      padding-left: 23px;
+      position: relative;
+      cursor: pointer;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        background-color: $white;
+        padding: 3px;
+        border-radius: 50%;
+        border: 1px solid $borderColor;
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: -2.3px;
+      }
+    }
+    & input[type="radio"]{
+      display: none;
+      &:checked + label::after{
+        content: url(../images/radio-checked.svg);
       }
     }
     &-place{
