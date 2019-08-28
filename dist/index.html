@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css/chosen.min.css"> -->
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Document</title>
 </head>
@@ -22,8 +24,8 @@
         </div>
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link header__link_products">products<span> &#9660;</span></a>
+            <li class="header__item header__item-dropdown">
+              <a href="#!" class="header__link header__link_products">products<span> &#9660;</span></a>
               <ul class="header__dropdown">
 
                 <li class="header__dropdown-item">
@@ -88,9 +90,9 @@
 
               </ul>
             </li>
-            <li class="header__item"><a href="#" class="header__link">Services</a></li>
-            <li class="header__item"><a href="#" class="header__link">About us</a></li>
-            <li class="header__item"><a href="#" class="header__link">contacts</a></li>
+            <li class="header__item"><a href="#!" class="header__link">Services</a></li>
+            <li class="header__item"><a href="#!" class="header__link">About us</a></li>
+            <li class="header__item"><a href="#!" class="header__link">contacts</a></li>
           </ul>
         </nav>
         <a href="tel:380630563443" class="header__phone">+38 (063) 056-34-43</a>
@@ -333,7 +335,7 @@
     </div>
   </section>
 
-
+  <!-- .global -->
   <section class="global">
     <div class="container">
       <div class="global__title">Our global trade</div>
@@ -363,17 +365,16 @@
         <input type="radio" name="country" id="UAE">
         <input type="radio" name="country" id="Indonesia">
       </div>
-
       <div class="global__map">
         <img src="images/map.svg" alt="">
         <div class="global__map-marker">
           <img src="images/map-marker.svg" alt="">
         </div>
       </div>
-
     </div>
   </section>
 
+  <!-- .countries -->
   <section class="countries">
     <div class="container">
       <div class="countries__inner">
@@ -415,6 +416,7 @@
     </div>
   </section>
 
+  <!-- .about -->
   <section class="about">
     <div class="container">
       <div class="about__inner">
@@ -447,6 +449,7 @@
     </div>
   </section>
 
+  <!-- .feedback -->
   <section class="feedback">
     <div class="container">
       <div class="feedback__title">feedback</div>
@@ -464,28 +467,52 @@
 
             <p>What you need?</p>
             <div class="form__needs">
-              <select name="product" class="form__needs-list form__needs-list_products">
-                <option disable>Choose type of product</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+              <select name="product" class="form__needs-list form__needs-list_products" data-placeholder="Choose a ...">
+                <option disabled selected>Choose type of product</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Barley">Barley</option>
+                <option value="Oats">Oats</option>
+                <option value="Yellow corn">Yellow corn</option>
+                <option value="Sorghum">Sorghum</option>
+                <option value="Millet">Millet</option>
+                <option value="Coriander">Coriander</option>
+                <option value="Flax seed">Flax seed</option>
+                <option value="Rapeseed">Rapeseed</option>
+                <option value="Soybean">Soybean</option>
+                <option value="Mustard seeds">Mustard seeds</option>
+                <option value="Sunflower seeds">Sunflower seeds</option>
+                <option value="Yellow peas">Yellow peas</option>
+                <option value="Green peas">Green peas</option>
+                <option value="Chick peas">Chick peas</option>
+                <option value="Chick peas splits">Chick peas splits</option>
+                <option value="Lentils">Lentils</option>
+                <option value="Faba beans">Faba beans</option>
+                <option value="Kidney beans">Kidney beans</option>
+                <option value="Soybean meal">Soybean meal</option>
+                <option value="Sunflower meal">Sunflower meal</option>
+                <option value="Soybean cake">Soybean cake</option>
+                <option value="Yellow split peas">Yellow split peas</option>
+                <option value="Green split peas">Green split peas</option>
+                <option value="Oat flakes">Oat flakes</option>
+                <option value="Hulled oats">Hulled oats</option>
+                <option value="Confectionary sunflower seeds">Confectionary sunflower seeds</option>
+                <option value="Sunflower seeds kernel">Sunflower seeds kernel</option>
               </select>
               <label for="quantity">
                 <input type="number" id="quantity" placeholder="Quantity">mt
               </label>
               <select name="delivery" class="form__needs-list form__needs-list_delivery">
-                <option disable>Delivery type</option>
+                <option disabled selected>Delivery type</option>
                 <option value="Truck">Truck</option>
-                <option value="container_20ft">container 20ft</option>
-                <option value="container_40ft">container 40ft</option>
+                <option value="container_20ft">Container 20ft</option>
+                <option value="container_40ft">Container 40ft</option>
               </select>
               <select name="packing" class="form__needs-list form__needs-list_packing">
-                <option disable>Packing type</option>
-                <option value="bulk">bulk</option>
+                <option disabled selected>Choose type of product</option>
+                <option value="bulk">Bulk</option>
                 <option value="PP_bags_25kg">PP bags 25kg</option>
                 <option value="PP_bags_50kg">PP bags 50kg</option>
-                <option value="big bags">big bags</option>
+                <option value="big bags">Big bags</option>
               </select>
             </div>
             <p>Delivery terms</p>
@@ -501,37 +528,133 @@
           </form>
         </div>
         <div class="feedback__image">
-          <img src="images/feedback-img.jpg" alt="">
+          <img src="images/feedback-img.png" alt="">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="footer">
+  <!-- .footer -->
+  <footer class="footer">
     <div class="container">
       <div class="footer__nav">
-        <a href="#!" class="footer__logo"></a>
+        <a href="#!" class="footer__logo"><img src="images/logo.png"></a>
         <nav class="footer__menu">
           <a href="#!">services</a>
           <a href="#!">about us</a>
           <a href="#!">contacts</a>
         </nav>
         <div class="footer__contacts">
-          <a href="tel:380630563443" class="footer__tel"></a>
-          <a href="mailto:pereezd@prostopereezd.com" class="footer__email">pereezd@prostopereezd.com</a>
+          <a href="tel:380630563443" class="footer__tel">+38 (063) 056-34-43</a>
+          <a href="mailto:equis@equis.com" class="footer__email">equis@equis.com</a>
           <div class="footer__social">
-            <a href="#!" class="footer__social-facebook"></a>
-            <a href="#!" class="footer__social-instagram"></a>
-            <a href="#!" class="footer__social-twitter"></a>
+            <a href="#!" class="footer__social-item footer__social-item_facebook">
+              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 82.6 82.6" xml:space="preserve">
+                <path class="st0" d="M41.3,0C18.5,0,0,18.5,0,41.3s18.5,41.3,41.3,41.3s41.3-18.5,41.3-41.3C82.7,18.5,64.1,0,41.3,0z M41.3,77.4
+                  c-19.9,0-36-16.1-36-36s16.1-36,36-36s36,16.1,36,36C77.3,61.2,61.2,77.4,41.3,77.4z" />
+                <path class="st0" d="M35.5,64.6h9.3V41.3h6.5l0.7-7.8h-7.2c0,0,0-2.9,0-4.4c0-1.8,0.4-2.6,2.1-2.6c1.4,0,5,0,5,0v-8.1
+                  c0,0-5.3,0-6.4,0c-6.9,0-10,3-10,8.9c0,5.1,0,6.2,0,6.2h-4.8v7.9h4.8L35.5,64.6L35.5,64.6z" />
+              </svg>
+            </a>
+            <a href="#!" class="footer__social-item footer__social-item_instagram">
+              <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 624 624" style="enable-background:new 0 0 624 624;" xml:space="preserve">
+                <g>
+                  <path class="st0" d="M532.6,91.4C473.7,32.5,395.3,0,312,0S150.3,32.5,91.4,91.4S0,228.7,0,312s32.5,161.7,91.4,220.6
+                    C150.3,591.5,228.7,624,312,624s161.7-32.5,220.6-91.4C591.5,473.7,624,395.3,624,312S591.5,150.3,532.6,91.4z M312,584.2
+                    c-72.7,0-141-28.3-192.5-79.7S39.8,384.7,39.8,312s28.3-141,79.7-192.5S239.3,39.8,312,39.8s141,28.3,192.5,79.7
+                    s79.7,119.8,79.7,192.5s-28.3,141-79.7,192.5S384.7,584.2,312,584.2z" />
+                  <ellipse class="st0" cx="312" cy="312" rx="45.9" ry="45.9" />
+                  <path class="st0" d="M372.9,176H251.1c-41.4,0-75,33.7-75,75v121.8c0,41.4,33.7,75,75,75h121.8c41.4,0,75-33.7,75-75V251.1
+                    C448,209.7,414.3,176,372.9,176z M312,382c-38.6,0-70-31.4-70-70s31.4-70,70-70s70,31.4,70,70S350.6,382,312,382z M397.5,251.7
+                    c-3.3,3.3-7.9,5.2-12.5,5.2c-4.7,0-9.2-1.9-12.5-5.2s-5.2-7.9-5.2-12.5c0-4.7,1.9-9.2,5.2-12.5c3.3-3.3,7.9-5.2,12.5-5.2
+                    c4.7,0,9.2,1.9,12.5,5.2s5.2,7.9,5.2,12.5S400.8,248.4,397.5,251.7z" />
+                </g>
+              </svg>
+
+            </a>
+            <a href="#!" class="footer__social-item footer__social-item_twitter">
+              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 82.6 82.6" xml:space="preserve">
+                <path class="st0"
+                  d="M41.3,0C18.5,0,0,18.5,0,41.3s18.5,41.3,41.3,41.3s41.3-18.5,41.3-41.3S64.1,0,41.3,0z M41.3,77.4	c-19.9,0-36-16.1-36-36s16.1-36,36-36s36,16.1,36,36C77.3,61.2,61.1,77.4,41.3,77.4z" />
+                <path class="st0"
+                  d="M22.8,56.2c3.7,2.4,8.1,3.8,12.8,3.8c15.5,0,24.3-13.1,23.7-24.8c1.6-1.2,3-2.6,4.2-4.3	c-1.5,0.7-3.1,1.1-4.8,1.3c1.7-1,3-2.7,3.7-4.6c-1.6,1-3.4,1.7-5.3,2C55.6,28,53.4,27,51,27c-5.4,0-9.3,5-8.1,10.3 C36,37,29.8,33.6,25.7,28.6c-2.2,3.8-1.1,8.7,2.6,11.1c-1.4,0-2.7-0.4-3.8-1c-0.1,3.9,2.7,7.5,6.7,8.3c-1.2,0.3-2.5,0.4-3.8,0.1	c1.1,3.3,4.1,5.7,7.8,5.8C31.7,55.5,27.2,56.8,22.8,56.2z" />
+              </svg>
+            </a>
           </div>
         </div>
+
       </div>
+      <div class="footer__products">
+        <div class="footer__products-box">
+          <div class="footer__products-title">Grains</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Wheat</a></li>
+            <li class="footer__products-list_item"><a href="#!">Barley</a></li>
+            <li class="footer__products-list_item"><a href="#!">Oats</a></li>
+            <li class="footer__products-list_item"><a href="#!">Yellow corn</a></li>
+          </ul>
+        </div>
+        <div class="footer__products-box">
+          <div class="footer__products-title">Seeds</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Sorghum</a></li>
+            <li class="footer__products-list_item"><a href="#!">Millet</a></li>
+            <li class="footer__products-list_item"><a href="#!">Coriander</a></li>
+          </ul>
+        </div>
+        <div class="footer__products-box">
+          <div class="footer__products-title">Oil seeds</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Flax seed</a></li>
+            <li class="footer__products-list_item"><a href="#!">Rapeseed</a></li>
+            <li class="footer__products-list_item"><a href="#!">Soybean</a></li>
+            <li class="footer__products-list_item"><a href="#!">Mustard seeds</a></li>
+            <li class="footer__products-list_item"><a href="#!">Sunflower seeds</a></li>
+          </ul>
+        </div>
+        <div class="footer__products-box">
+          <div class="footer__products-title">Pulses</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Yellow peas</a></li>
+            <li class="footer__products-list_item"><a href="#!">Green peas</a></li>
+            <li class="footer__products-list_item"><a href="#!">Chick peas</a></li>
+            <li class="footer__products-list_item"><a href="#!">Chick peas splits</a></li>
+            <li class="footer__products-list_item"><a href="#!">Lentils</a></li>
+            <li class="footer__products-list_item"><a href="#!">Faba beans</a></li>
+            <li class="footer__products-list_item"><a href="#!">Kidney beans</a></li>
+          </ul>
+        </div>
+        <div class="footer__products-box">
+          <div class="footer__products-title">Animal feed</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Soybean meal</a></li>
+            <li class="footer__products-list_item"><a href="#!">Sunflower meal</a></li>
+            <li class="footer__products-list_item"><a href="#!">Soybean cake</a></li>
+            <li class="footer__products-list_item"><a href="#!">Sunflower cake</a></li>
+          </ul>
+        </div>
+        <div class="footer__products-box">
+          <div class="footer__products-title">Retail products</div>
+          <ul class="footer__products-list">
+            <li class="footer__products-list_item"><a href="#!">Yellow split peas</a></li>
+            <li class="footer__products-list_item"><a href="#!">Green split peas</a></li>
+            <li class="footer__products-list_item"><a href="#!">Oat flakes</a></li>
+            <li class="footer__products-list_item"><a href="#!">Hulled oats</a></li>
+            <li class="footer__products-list_item"><a href="#!">Confectionary sunflower seeds</a></li>
+            <li class="footer__products-list_item"><a href="#!">Sunflower seeds kernel</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copy">© 2018 All rights reserved Development and promotion of <a href="https://mobios.ua/"
+          target="_blank">Mobios</a></div>
     </div>
-  </section>
-   
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- <script src="js/jquery.mapael.min.js"></script> -->
   <script src="js/libs.min.js"></script>
+  <script src="js/chosen.proto.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

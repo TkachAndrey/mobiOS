@@ -6,9 +6,9 @@
 	.st0{fill:#A4A4A4;}
 	.st1{fill:#FFFFFF;}
 	.st2{fill:#00A200;}
-	.st3{fill:#EA431C;}
-	.st4{fill:#CAD921;}
-	.st5{fill:#CAD921;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+	.st3{fill:#00A200;}
+	.st4{fill:#f6a947;}
+	.st5{fill:#f6a947;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
 	.st6{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
 	.st7{display:none;}
 	.st8{display:inline;fill:#4F4F4F;stroke:#C6C6C6;stroke-width:0.25;stroke-miterlimit:10;}
