@@ -1,20 +1,26 @@
 .goods{
-  padding: 100px 0;
+  // padding: 100px 0;
   &__inner{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    // display: flex;
+    // justify-content: space-between;
+    // position: relative;
   }
   &__text{
-    width: 440px;
+    // width: 440px;
     font-family: "A_Concepto";
-    font-size: 48px;
-    line-height: 48px;
+    // font-size: 48px;
+    // line-height: 48px;
     text-transform: uppercase;
-    padding-top: 70px;
-    & span{
-      padding-bottom: 50px;
-      border-bottom: 3px solid $activeColor;
+    // padding-top: 70px;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      right: 0;
+      width: 182px;
+      height: 3px;
+      background-color: $activeColor;
     }
   }
   &__icon{
@@ -29,31 +35,15 @@
     }
   }
   &__products{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    position: relative;
     &-inner{
       margin-right: 30px;
     }
     &-item{
-      width: 300px;
+      // width: 300px;
       padding: 45px 20px 45px 25px;
       display: flex;
       transition: all 1s ease;
-      &:hover{
-        transform: scale(1.1);
-        outline: none;
-        background: url(../images/hover-bg.jpg);
-        & .goods__name{
-          color: $white;
-        }
-        & .goods__list{
-          opacity: 1;
-        }
-      }
       &_grains{
-        grid-column: 1/2;
         & .goods__icon{
           width: 67px;
           height: 75px;
@@ -63,17 +53,8 @@
             height: 82px;
           }
         }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/wheat_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
-          }
-        }
       }
       &_seeds{
-        grid-column: 2/3;
         & .goods__icon{
           width: 54px;
           height: 73px;
@@ -83,18 +64,8 @@
             height: 79px;
           }
         }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/sprout_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
-          }
-        }
       }
       &_oil{
-        grid-column: 3/4;
-        grid-row: 1/2;
         & .goods__icon{ 
           width: 59px;
           height: 76px;
@@ -104,18 +75,8 @@
             height: 81px;
           }
         }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/sunflower_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
-          }
-        }
       }
       &_pulses{
-        grid-column: 1/2;
-        grid-row: 2/3;
         & .goods__icon{  
           width: 69px;
           height: 69px;
@@ -125,18 +86,8 @@
             height: 73px;
           }
         }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/peas_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
-          }
-        }
       }
       &_animal{
-        grid-column: 2/3;
-        grid-row: 2/3;
         & .goods__icon{ 
           width: 91px;
           height: 61px;
@@ -144,14 +95,6 @@
             content: url(../images/Icon/cow_g.svg);
             width: 95px;
             height: 64px;
-          }
-        }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/cow_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
           }
         }
       }
@@ -165,14 +108,6 @@
             height: 64px;
           }
         }
-        &:hover{
-          & .goods__icon::before{
-            content: url(../images/Icon/shopping-cart_white.svg);
-            z-index: 3;
-            right: 7px;
-            bottom: 7px;
-          }
-        }
       }
     }
   }
@@ -183,29 +118,29 @@
     text-transform: uppercase;
   }
   &__list{
-    opacity: 0;
-    &-item{
-      margin-bottom: 5px;
-      font-family: $baseFontFamily;
-      font-size: 12px;
-      font-weight: 500;
-      text-decoration: underline;
-      line-height: 16px;
-      position: relative;
-      &::before{
-        content: url(../images/disc.svg);
-        position: absolute;
-        left: -7px;
-        top: -2px;
-      }
-      & a{
-        color: $white;
-      }
-    }
+    // opacity: 0;
+    // &-item{
+    //   margin-bottom: 5px;
+    //   font-family: $baseFontFamily;
+    //   font-size: 12px;
+    //   font-weight: 500;
+    //   text-decoration: underline;
+    //   line-height: 16px;
+    //   position: relative;
+    //   &::before{
+    //     content: url(../images/disc.svg);
+    //     position: absolute;
+    //     left: -7px;
+    //     top: -2px;
+    //   }
+    //   & a{
+    //     color: $white;
+    //   }
+    // }
   }
   &__lines{
     position: absolute;
-    min-width: 100%;
+    width: 100%;
     height: 2px;
     top: 50%;
     background-color: $borderColor;

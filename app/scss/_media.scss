@@ -1,0 +1,676 @@
+@media (min-width: 320px) {
+  .header {
+    &__logo {
+      width: 115px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__phone {
+      display: none;
+
+      &-mob {
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        margin-right: 25px;
+      }
+    }
+
+    &__box {
+      & .hamburger {}
+    }
+
+    &__nav-mob {
+      position: fixed;
+      top: 68px;
+      right: -50%;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 50px;
+      text-transform: uppercase;
+      background-color: $black;
+      border: 1px solid $menuColor;
+      border-left: 0;
+      padding: 10px 20px;
+      transition: all ease 1s;
+
+      & a {
+        color: $menuColor;
+        text-decoration: none;
+      }
+
+      &_visible {
+        right: 0;
+      }
+    }
+  }
+  .top {
+    min-height: 90vh;
+    // background-size:  auto 50%;
+    &__title {
+      font-size: 12px;
+      line-height: 0;
+
+      &::after {
+        height: 1px;
+        bottom: -7px;
+      }
+
+      &-before {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      &-after {
+        font-size: 17px;
+      }
+    }
+  }
+  .goods {
+    padding: 33px 0 40px;
+
+    &__inner {
+      display: block;
+    }
+
+    &__text {
+      padding-top: 0;
+      width: auto;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      position: relative;
+      &::after {
+        left: 50%;
+        width: 182px;
+        height: 3px;
+        transform: translateX(-50%)
+      }
+    }
+
+    &__products {
+      margin: 70px 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+
+      &-item {
+        padding: 25px 0 25px 25px;
+        display: block;
+        &_grains {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          border-bottom: 2px solid $borderColor;
+          border-right: 2px solid $borderColor;
+        }
+        &_seeds {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          border-bottom: 2px solid $borderColor;
+          & .goods__icon{
+            height: 75px;
+          }
+        }
+        &_oil {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          border-bottom: 2px solid $borderColor;
+          border-right: 2px solid $borderColor;
+        }
+        &_pulses {
+          grid-column: 2/3;
+          grid-row: 2/3;
+          border-bottom: 2px solid $borderColor;
+          & .goods__icon{
+            height: 76px;
+          }
+        }
+        &_animal {
+          grid-column: 1/2;
+          grid-row: 3/4;
+          border-right: 2px solid $borderColor;
+        }
+        &_retail {
+          grid-column: 2/3;
+          grid-row: 3/4;
+
+        }
+      }
+    }
+
+    &__name{
+      font-size: 17px;
+    }
+
+    &__lines {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__title {
+      display: none;
+    }
+  }
+  .work{
+    padding-bottom: 200px;
+    &__process{
+      display: none;
+    }
+    &__inner{
+      display: block;
+    }
+    & .slider{
+      width: 100%;
+      margin-bottom: 0;
+      z-index: 1;
+      & .slick-dots{
+        left: 15px;
+      }
+    }
+    & .slide__item{
+      padding-left: 0;
+      z-index: 3;
+      height: 350px;
+    }
+    & .slide__description{
+      background-color: $greenList;
+      padding: 13px;
+      padding-bottom: 30px;
+      &::before{
+        content: "";
+      }
+    }
+    & .slide__title{
+      font-size: 14px;
+    }
+    & .slide__text{
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+// //////////////////////////////////////////////
+@media (min-width: 576px) {
+  .header {
+    &__logo {
+      width: 150px;
+    }
+
+    &__phone {
+      &-mob {
+        margin-right: 40px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__nav-mob {
+      top: 83px;
+    }
+
+    &__box {
+      & .hamburger {}
+    }
+  }
+  .top {
+    &__title {
+      font-size: 18px;
+      line-height: .6;
+
+      l &::after {
+        height: 2px;
+        bottom: -12px;
+      }
+
+      &-before {
+        font-size: 36px;
+        margin-right: 15px;
+      }
+
+      &-after {
+        font-size: 30px;
+      }
+    }
+  }
+  .goods {
+    &__text {
+      font-size: 33px;
+      line-height: 33px;
+    }
+  }
+  .work{
+    & .slider{
+      & .slick-dots{
+        left: 20px;
+      }
+    }
+    & .slide__item{
+      height: 400px;
+    }
+    & .slide__description{
+      padding: 20px;
+    }
+    & .slide__title{
+      font-size: 16px;
+    }
+    & .slide__text{
+      font-size: 14px;
+    }
+  }
+}
+
+// ///////////////////////////////////////////////
+@media (min-width: 768px) {
+  .header {
+    &__logo {
+      width: 250px;
+    }
+
+    &__phone {
+      &-mob {
+        margin-right: 50px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__nav-mob {
+      font-size: 22px;
+      line-height: 70px;
+      top: 92px;
+    }
+  }
+  .top {
+    &__title {
+      font-size: 24px;
+      line-height: 1.1;
+
+      &::after {
+        height: 3px;
+        bottom: -7px;
+      }
+
+      &-before {
+        font-size: 60px;
+        margin-right: 20px;
+      }
+
+      &-after {
+        font-size: 40px;
+      }
+    }
+  }
+  .goods {
+    padding: 33px 0 40px;
+    &__text {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &__products {
+      margin: 70px 0 40px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      &-item {
+        padding: 25px 0 25px 25px;
+        &_grains {
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+
+        &_seeds {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          border-bottom: 2px solid $borderColor;
+          border-right: 2px solid $borderColor;
+          & .goods__icon{
+            height: 75px;
+          }
+        }
+
+        &_oil {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          border-right: none;
+        }
+
+        &_pulses {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          border-bottom: none;
+          border-right: 2px solid $borderColor;
+          & .goods__icon{
+            height: 76px;
+          }
+        }
+
+        &_animal {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+
+        &_retail {
+          grid-column: 3/4;
+          grid-row: 2/3;
+        }
+      }
+    }
+
+    &__name{
+      font-size: 17px;
+    }
+  }
+  .work{
+    & .slider{
+      & .slick-dots{
+        left: 30px;
+        bottom: 20px;
+      }
+    }
+    & .slide__item{
+      height: 500px;
+      & img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .slide__description{
+      padding: 30px;
+      height: 160px;
+    }
+    & .slide__title{
+      font-size: 22px;
+    }
+    & .slide__text{
+      font-size: 16px;
+    }
+  }
+}
+
+// //////////////////////////////////////////
+@media (min-width: 992px) {
+  .header {
+    background-size: cover;
+    &__nav {
+      display: block;
+
+      &-mob {
+        display: none;
+      }
+    }
+
+    &__list {
+      justify-content: space-around;
+      font-size: 16px;
+    }
+
+    &__phone {
+      display: block;
+      // font-size: 1px !important;
+
+      &-mob {
+        display: none;
+      }
+    }
+
+    & .hamburger {
+      display: none;
+    }
+  }
+  .top {
+    &__title {
+      font-size: 30px;
+      line-height: 24px;
+
+      &::after {
+        height: 4px;
+        bottom: -15px;
+      }
+
+      &-before {
+        font-size: 70px;
+        margin-right: 50px;
+      }
+
+      &-after {
+        font-size: 50px;
+      }
+    }
+  }
+  .work{
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__process{
+      display: block;
+    }
+    & .slider{
+      & .slick-dots{
+        left: 30px;
+        bottom: 20px;
+      }
+    }
+    & .slide__item{
+      height: 500px;
+      & img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .slide__description{
+      padding: 30px;
+      height: 160px;
+    }
+    & .slide__title{
+      font-size: 22px;
+    }
+    & .slide__text{
+      font-size: 16px;
+    }
+  }
+}
+
+// //////////////////////////////////////////
+@media (min-width: 1200px) {
+  .header {
+    &__list {
+      justify-content: space-between;
+      font-size: 18px;
+    }
+    &__phone {
+      font-size: 18px;
+    }
+  }
+  .goods {
+    padding: 100px 0;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    &__text {
+      width: 575px;
+      margin-right: 30px;
+      text-align: left;
+      padding-top: 70px;
+      font-size: 48px;
+      &::after {
+        left: 0;
+        top: 340px;
+        width: 182px;
+        height: 3px;
+        transform: none;
+      }
+    }
+    &__products {
+      margin:0;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      position: relative;
+      &-item {
+        // width: 300px;
+        padding: 45px 20px 45px 25px;
+        // padding: 45px 20px 45px 25px;
+        display: flex;
+        // border: none;
+        transition: all 1s ease;
+        &:hover{
+          transform: scale(1.1);
+          outline: none;
+          background: url(../images/hover-bg.jpg);
+          & .goods__name{
+            color: $white;
+          }
+          & .goods__list{
+            opacity: 1;
+          }
+        }
+        &_grains {
+          grid-column: 1/2;
+          grid-row: 1/2;
+          & .goods__icon{
+            width: 67px;
+            height: 75px;
+            &::before{
+              content: url(../images/Icon/wheat_g.svg);
+              width: 72px;
+              height: 82px;
+            }
+          }
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/wheat_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+        &_seeds {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          & .goods__icon{
+            width: 54px;
+            height: 73px;
+            &::before{
+              content: url(../images/Icon/sprout_g.svg);
+              width: 59px;
+              height: 79px;
+            }
+          }
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/sprout_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+        &_oil {
+          grid-column: 3/4;
+          grid-row: 1/2;
+          & .goods__icon{ 
+            width: 59px;
+            height: 76px;
+            &::before{
+              content: url(../images/Icon/sunflower_g.svg);
+              width: 63px;
+              height: 81px;
+            }
+          }
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/sunflower_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+        &_pulses {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/peas_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+        &_animal{
+          grid-column: 2/3;
+          grid-row: 2/3;
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/cow_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+        &_retail {
+          grid-column: 3/4;
+          grid-row: 2/3;
+          & .goods__icon{
+            width: 74px;
+            height: 62px;
+            &::before{
+              content: url(../images/Icon/shopping-cart_g.svg);
+              width: 77px;
+              height: 64px;
+            }
+          }
+          &:hover{
+            & .goods__icon::before{
+              content: url(../images/Icon/shopping-cart_white.svg);
+              z-index: 3;
+              right: 7px;
+              bottom: 7px;
+            }
+          }
+        }
+      }
+    }
+    &__lines {
+      display: block;
+    }
+    &__list {
+      display: block;
+      opacity: 0;
+    &-item{
+      margin-bottom: 5px;
+      font-family: $baseFontFamily;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: underline;
+      line-height: 16px;
+      position: relative;
+      &::before{
+        content: url(../images/disc.svg);
+        position: absolute;
+        left: -7px;
+        top: -2px;
+      }
+      & a{
+        color: $white;
+      }
+    }
+    }
+    &__title {
+      display: block;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+
 .header{
   padding: 10px 0;
   background-color: $black;
@@ -10,15 +11,23 @@
     align-items: center;
     position: relative;
   }
+  &__logo{
+    &-link{
+      display: inline-block;
+      & img{
+        vertical-align: top;
+      }
+    }
+  }
   &__nav{
     padding: 0 11px;
   }
   &__list{
     min-width: 513px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     font-family: $baseFontFamily;
-    font-size: 18px;
+    // font-size: 18px;
     font-weight: 500;
     list-style: none;
   }
@@ -86,7 +95,7 @@
     text-decoration: none;
     font-family: $baseFontFamily;
     color: $white;
-    font-size: 18px;
+    // font-size: 18px;
     font-weight: 500;
   }
   &__dropdown{
