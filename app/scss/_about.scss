@@ -1,35 +1,36 @@
 .about{
-  padding: 105px 0;
+  // padding: 105px 0;
   background: url(../images/about-bg.webp);
   background-size: cover;
+  background-attachment: fixed;
   &__inner{
-    padding: 0 160px;
-    display: flex;
-    justify-content: stretch;
+    // padding: 0 160px;
+    // display: flex;
+    // justify-content: stretch;
   }
   &__years{
-    border: 2px solid $activeColor;
-    position: relative;
-    width: 110px;
+    // border: 2px solid $activeColor;
+    // position: relative;
+    // width: 110px;
     & p{
-      position: absolute;
-      top: 200px;
-      left: -82px;
-      width: 215px;
-      height: 30px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
-      color: $white;
-      font-family: $baseFontFamily;
-      font-size: 24px;
-      font-weight: 700;
-      transform: rotate(-90deg);
+      // position: absolute;
+      // top: 200px;
+      // left: -82px;
+      // width: 215px;
+      // height: 30px;
+      // text-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+      // color: $white;
+      // font-family: $baseFontFamily;
+      // font-size: 24px;
+      // font-weight: 700;
+      // transform: rotate(-90deg);
     }
   }
   
   &__group{
+    width: 242px;
     position: relative;
     padding: 42px 0 42px 30px;
-    margin-right: 120px;
     &-item{
       margin-bottom: 15px;
       color: $white;
@@ -69,7 +70,7 @@
         &::after{
           content: url(../images/line-countries.svg);
           bottom: -17px;
-          right: 50px;
+          left: -70px;
         }
       }
       &_fcls{
@@ -105,27 +106,27 @@
         &::after{
           content: url(../images/line-clients.svg);
           top: -15px;
-          right: 55px;
+          left: 55px;
         }
       }
     }
   }
   &__equis{
-    padding: 20px 15px 15px 0;
+    // padding: 20px 15px 15px 0;
     &-title{
       color: $white;
       font-family: "A_Concepto";
-      font-size: 48px;
+      // font-size: 48px;
       font-weight: 400;
       text-transform: uppercase;
-      margin-bottom: 75px;
+      // margin-bottom: 75px;
     }
     &-text{
       margin-left: 122px;
       & p{
         color: $white;
         font-family: $baseFontFamily;
-        font-size: 14px;
+        // font-size: 14px;
         font-weight: 400;
         line-height: 20px;
         margin-bottom: 35px;
@@ -135,13 +136,15 @@
       color: $activeColor;
       font-size: 14px;
       font-weight: 700;
-      position: relative;
       text-decoration: none;
-      &::after{
-        content: url(../images/arrow-right.png);
-        position: absolute;
-        right: -33px;
-        top: 3px;
+      & span{
+        position: relative;
+        &::after{
+          content: url(../images/arrow-right.png);
+          position: absolute;
+          right: -33px;
+          top: 3px;
+        }
       }
     }
   }

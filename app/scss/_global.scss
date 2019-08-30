@@ -46,19 +46,13 @@
 .countries{
   margin-top: -135px;
   background-color: $bgGrey;
-  padding: 50px 0;
   &__inner{
     display: flex;
     & li{
       font-size: 14px;
       font-weight: 500;
       padding-left: 12px;
-      margin-right: 30px;
       position: relative;
-      cursor: pointer;
-      & label{
-        cursor: pointer;
-      }
       &::before{
         content: "";
         display: block;
@@ -75,45 +69,25 @@
           background-color: $greenList;
         }
       }
-      &:hover{
-        color: $activeColor;
-        &::before{
-          background-color: red;
-        }
-      }
-      &:checked{
-        color: $activeColor;
-        &::before{
-          background-color: red;
-        }
-      }
     }
   }
   &__origin{
-    padding: 13px 25px;
-    border-left: 6px solid $activeColor;
     &-title{
       color: $mainColor;
       font-family: $baseFontFamily;
-      font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 35px;
     }
     &-list{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-row-gap: 25px;
     }
   }
   &__customers{
-    padding: 13px 25px;
-    border-left: 6px solid $greenList;
     &-title{
       color: $mainColor;
       font-family: $baseFontFamily;
-      font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: 35px;

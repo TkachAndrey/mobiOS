@@ -1,5 +1,5 @@
 .feedback{
-  padding: 75px 0 60px;
+  // padding: 75px 0 60px;
   &__title{
     color: mainColor;
     font-family: "A_Concepto";
@@ -14,40 +14,35 @@
       height: 3px;
       background-color: $activeColor;
       position: absolute;
-      bottom: -32px;
-      left: 0;
+      // bottom: -32px;
+      // left: 0;
     }
-    &::after{
-      content: "feedback";
-      position: absolute;
-      left: 242px;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0.05;
-      color: $mainColor;
-      font-family: "A_Concepto";
-      font-size: 118px;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
+    // &::after{
+    //   content: "feedback";
+    //   position: absolute;
+    //   left: 242px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   opacity: 0.05;
+    //   color: $mainColor;
+    //   font-family: "A_Concepto";
+    //   font-size: 118px;
+    //   font-weight: 400;
+    //   text-transform: uppercase;
+    // }
   }
   &__text{
     margin-bottom: 25px;
     color: $black;
   }
-  &__inner{
-    display: flex;
-    justify-content: space-between;
-  }
   &__image{
-    width: 655px;
     & img{
       box-shadow: 0 0 21px rgba(0, 0, 0, 0.23);
     }
   }
 }
 .form{
-  width: 695px;
+  // width: 695px;
   & input{
     padding: 10px 20px;
     color: $inputColor;
@@ -62,7 +57,7 @@
     color: $black;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   & select{
     appearance: none;
@@ -75,14 +70,15 @@
   &__info{
     display: flex;
     justify-content: space-between;
+    // flex-direction: column;
     flex-wrap: wrap;
     & input{
-      width: 333px;
+      // width: 333px;
       margin-bottom: 20px;
     }
   }
   &__needs{
-    width: 482px;
+    // width: 482px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -93,21 +89,21 @@
       font-family: $baseFontFamily;
       font-size: 14px;
       font-weight: 500;
-      background-color: $inputBgColor;
+      // background-color: $inputBgColor;
       outline: none;
       border: 1px solid $borderColor;
       border-radius: 0;
       margin-bottom: 20px;
       &_products{
-        width: 333px;
+        // width: 333px;
       }
       &_delivery{
-        width: 150px;
-        height: 40px;
+        // width: 150px;
+        // height: 40px;
       }
       &_packing{
-       width: 314px;
-       height: 40px;
+      //  width: 314px;
+      //  height: 40px;
       }
       
     }
@@ -125,19 +121,18 @@
       margin-bottom: 20px;
       & input[type="number"]{
         margin-right: 10px;
-        width: 90px;
+        // width: 90px;
         padding-right: 0;
-        appearance: none;
       }
     }
   }
   &__delivery{
-    width: 483px;
+    // width: 483px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     & label{
-      margin-right: 66px;
+      // margin-right: 66px;
       padding-left: 23px;
       position: relative;
       cursor: pointer;
@@ -159,7 +154,7 @@
         content: "";
         position: absolute;
         left: 4px;
-        top: -2.3px;
+        top: -3px;
       }
     }
     & input[type="radio"]{
@@ -191,8 +186,8 @@
     resize: none;
   }
   & input[type="submit"]{
-    width: 333px;
-    padding: 25px 0;
+    // width: 333px;
+    // padding: 25px 0;
     color: $mainColor;
     font-family: $baseFontFamily;
     font-size: 18px;
