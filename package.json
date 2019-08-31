@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "datamaps": "^0.5.9",
+    "jquery.mmenu": "^7.3.3",
     "magnific-popup": "^1.1.0",
     "slick-carousel": "^1.8.1"
   }

@@ -59,7 +59,8 @@ $(function () {
   });
   ////////////////////////
   $(".hamburger").on("click", function () {
-    $(".header__nav-mob").toggleClass("header__nav-mob_visible");
+    $(".mm").toggleClass("mm__visible");
   });
-
+  // /////////////////////////////////
+  $( ".mm__panel" ).accordion();
 });
