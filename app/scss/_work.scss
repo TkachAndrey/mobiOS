@@ -1,9 +1,9 @@
 .work{
-  padding-top: 60px;
+  // padding-top: 60px;
   background-color: $bgGrey;
   &__inner{
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
   }
   &__demo{
     & .slick-dots{
@@ -30,13 +30,13 @@
     }
   }
   &__process{
-    padding-top: 35px;
-    margin-left: 70px;
+    // padding-top: 35px;
+    // margin-left: 70px;
   }
   &__title{
     color: $mainColor;
     font-family: "A_Concepto";
-    font-size: 48px;
+    // font-size: 48px;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -62,43 +62,43 @@
       }
     }
     & .slick-track{
-      width: 640px !important;
-      transform: none !important;
+      // width: 640px !important;
+      // transform: none !important;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr 1fr 1fr;
+      // grid-template-rows: 1fr 1fr;
       & .slick-slide{
-        width: 135px !important;
-        padding: 15px;
+        // width: 135px !important;
+        // padding: 15px;
         outline: none;
         cursor: pointer;
         &:nth-of-type(1){
-          grid-column: 1/2;
-          grid-row: 1/2;
+          // grid-column: 1/2;
+          // grid-row: 1/2;
         }
         &:nth-of-type(2){
-          grid-column: 2/3;
-          grid-row: 1/2;
+          // grid-column: 2/3;
+          // grid-row: 1/2;
         }
         &:nth-of-type(3){
-          grid-column: 3/4;
-          grid-row: 1/2;
+          // grid-column: 3/4;
+          // grid-row: 1/2;
         }
         &:nth-of-type(4){
-          grid-column: 4/5;
-          grid-row: 1/2;
+          // grid-column: 4/5;
+          // grid-row: 1/2;
         }
         &:nth-of-type(5){
-          grid-column: 1/2;
-          grid-row: 2/3;
+          // grid-column: 1/2;
+          // grid-row: 2/3;
         }
         &:nth-of-type(6){
-          grid-column: 2/3;
-          grid-row: 2/3;
+          // grid-column: 2/3;
+          // grid-row: 2/3;
         }
         &:nth-of-type(7){
-          grid-column: 3/4;
-          grid-row: 2/3;
+          // grid-column: 3/4;
+          // grid-row: 2/3;
         }
         &.slick-current .work__steps-item .work__steps-digit{
           background-color: $activeColor;

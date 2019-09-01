@@ -36,10 +36,9 @@ $(function () {
     asNavFor: '.slider',
     focusOnSelect: true
   });
-  // ///////////////////////////////
 
 
-  // //////////////////////////////
+  // /////////////////////////////////////
   $('#FCA').on('change', function () {
     $('#portName').attr("placeholder", "Port name").removeAttr("disabled");
   });
@@ -61,6 +60,18 @@ $(function () {
   $(".hamburger").on("click", function () {
     $(".mm").toggleClass("mm__visible");
   });
+
   // /////////////////////////////////
-  $( ".mm__panel" ).accordion();
+  $( ".mm__panel" ).accordion({
+    collapsible: true,
+    heightStyle: "content"
+  });
+  // ///////////////////////////////////
+  $(".mm__link_products").on("click", function () {
+    $(".mm__block").toggleClass("mm__visible");
+  });
+  // ////////////////////////////////////
+  $(".mm__btn").on("click", function () {
+    $(".mm__block").toggleClass("mm__visible");
+  });
 });
