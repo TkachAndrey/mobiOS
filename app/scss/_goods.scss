@@ -1,17 +1,7 @@
 .goods{
-  // padding: 100px 0;
-  &__inner{
-    // display: flex;
-    // justify-content: space-between;
-    // position: relative;
-  }
   &__text{
-    // width: 440px;
     font-family: "A_Concepto";
-    // font-size: 48px;
-    // line-height: 48px;
     text-transform: uppercase;
-    // padding-top: 70px;
     &::after{
       content: "";
       position: absolute;
@@ -39,9 +29,8 @@
       margin-right: 30px;
     }
     &-item{
-      // width: 300px;
       padding: 45px 20px 45px 25px;
-      // display: flex;
+      height: 100%;
       transition: all 1s ease;
       &_grains{
         & .goods__icon{
@@ -116,27 +105,6 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  &__list{
-    // opacity: 0;
-    // &-item{
-    //   margin-bottom: 5px;
-    //   font-family: $baseFontFamily;
-    //   font-size: 12px;
-    //   font-weight: 500;
-    //   text-decoration: underline;
-    //   line-height: 16px;
-    //   position: relative;
-    //   &::before{
-    //     content: url(../images/disc.svg);
-    //     position: absolute;
-    //     left: -7px;
-    //     top: -2px;
-    //   }
-    //   & a{
-    //     color: $white;
-    //   }
-    // }
   }
   &__lines{
     position: absolute;

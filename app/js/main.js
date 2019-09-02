@@ -74,4 +74,23 @@ $(function () {
   $(".mm__btn").on("click", function () {
     $(".mm__block").toggleClass("mm__visible");
   });
+  // /////////////////////////
+  let show = true;
+    let countbox = ".about__group";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false;
+        let w_top = $(window).scrollTop();
+        let e_top = $(countbox).offset().top;
+        let w_height = $(window).height();
+        let d_height = $(document).height();
+        let e_height = $(countbox).outerHeight();
+        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            $('.about__group-item').css('opacity', '1');
+            $('.about__group-item').spincrement({
+                thousandSeparator: "",
+                duration: 3500
+            });
+            show = false;
+        }
+    });
 });

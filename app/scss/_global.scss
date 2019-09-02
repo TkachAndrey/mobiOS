@@ -15,32 +15,9 @@
     &-marker{
       width: 20px;
       position: absolute;
-      // left: 780px;
-      // top: 225px;
       transition: all ease 2s;
     }
   }
-  // &__points{
-  //   & input[type="radio"]#Ukraine:checked{
-  //     border: 1px solid red;
-  //   }
-  //   & input[type="radio"]#Russia:checked ~ .global__map-marker{
-  //     top: 170px;
-  //     left: 250px;
-  //   }
-  //   & input#Moldova:checked ~ .global__map-marker{
-  //     top: 230px;
-  //     left: 768px;
-  //   }
-  //   & input#Kazakhstan:checked ~ .global__map-marker{
-  //     top: 225px;
-  //     left: 925px;
-  //   }
-  //   & input#Spain-O:checked ~ .global__map-marker{
-  //     top: 255px;
-  //     left: 635px;
-  //   }
-  // }
 }
 
 .countries{

@@ -25,9 +25,7 @@
   &__list{
     min-width: 513px;
     display: flex;
-    // justify-content: space-between;
     font-family: $baseFontFamily;
-    // font-size: 18px;
     font-weight: 500;
     list-style: none;
   }
@@ -95,7 +93,6 @@
     text-decoration: none;
     font-family: $baseFontFamily;
     color: $white;
-    // font-size: 18px;
     font-weight: 500;
   }
   &__dropdown{

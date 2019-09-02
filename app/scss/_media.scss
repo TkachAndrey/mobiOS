@@ -135,11 +135,10 @@
     }
   }
   .top {
-    border: 1px solid red;
-    min-height: 50vh;
-    background-position: 0 13%;
-    background-size: contain;
-    // background-size: 100%;
+    background-image: url(../images/top-bg.jpg);
+    min-height: 250px;
+    background-position: right bottom;
+    background-size: cover;
     &__slogan{
       margin-top: 50px;
     }
@@ -375,8 +374,14 @@
       &__needs{
         &-list{
           background-color: $inputBgColor;
+          &_products{
+            width: 100%;
+          }
           &_delivery{
             width: 50%;
+          }
+          &_packing{
+            width: 100%;
           }
         }
         & label{
@@ -461,7 +466,7 @@
 }
 @media (min-width:450px){
   .top{
-    min-height: 50vh;
+    min-height: 350px;
   }
 }
 // //////////////////////////////////////////////
@@ -485,7 +490,7 @@
     }
   }
   .top {
-    min-height: 50vh;
+    min-height: 400px;
     &__title {
       font-size: 18px;
       line-height: .6;
@@ -584,6 +589,7 @@
           width: 48%;
           &_delivery{
             width: 48%;
+            background-position-x: 97% !important;
           }
         }
         & label{
@@ -636,7 +642,7 @@
     }
   }
   .top {
-    min-height: 70vh;
+    min-height: 500px;
     &__title {
       font-size: 24px;
       line-height: 1.1;
@@ -820,6 +826,7 @@
   .top {
     min-height: 100vh;
     background-size: cover;
+    background-attachment: fixed;
     &__title {
       font-size: 30px;
       line-height: 24px;
@@ -836,7 +843,6 @@
       }
     }
   }
-
   .global{
     padding-top: 150px;
     &__title{
@@ -864,6 +870,7 @@
   }
   .about{
     padding: 50px 0;
+    background-attachment: fixed;
     &__inner{
       display: flex;
       justify-content: stretch;
@@ -1277,6 +1284,7 @@
     & .slider{
       width: 712px;
       margin-bottom: -40px;
+      // z-index: 1;
       & .slick-slide{
         width: auto !important;
       }
@@ -1401,7 +1409,8 @@
         margin-bottom: 0;
         &-list{
           &_delivery{
-            width: 22%;
+            width: 25%;
+            background-position-x: 94% !important;
           }
           &_packing{
             width: 50%;

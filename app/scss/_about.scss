@@ -1,32 +1,6 @@
 .about{
-  // padding: 105px 0;
-  background: url(../images/about-bg.webp);
+  background: url(../images/about-bg.jpg);
   background-size: cover;
-  background-attachment: fixed;
-  &__inner{
-    // padding: 0 160px;
-    // display: flex;
-    // justify-content: stretch;
-  }
-  &__years{
-    // border: 2px solid $activeColor;
-    // position: relative;
-    // width: 110px;
-    & p{
-      // position: absolute;
-      // top: 200px;
-      // left: -82px;
-      // width: 215px;
-      // height: 30px;
-      // text-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
-      // color: $white;
-      // font-family: $baseFontFamily;
-      // font-size: 24px;
-      // font-weight: 700;
-      // transform: rotate(-90deg);
-    }
-  }
-  
   &__group{
     width: 242px;
     position: relative;
@@ -38,6 +12,7 @@
       font-size: 35px;
       font-weight: 700;
       position: relative;
+      opacity: 0;
       &::before{
         font-size: 16px;
         font-weight: 500;
@@ -112,21 +87,17 @@
     }
   }
   &__equis{
-    // padding: 20px 15px 15px 0;
     &-title{
       color: $white;
       font-family: "A_Concepto";
-      // font-size: 48px;
       font-weight: 400;
       text-transform: uppercase;
-      // margin-bottom: 75px;
     }
     &-text{
       margin-left: 122px;
       & p{
         color: $white;
         font-family: $baseFontFamily;
-        // font-size: 14px;
         font-weight: 400;
         line-height: 20px;
         margin-bottom: 35px;
