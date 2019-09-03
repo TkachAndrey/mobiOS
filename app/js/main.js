@@ -93,4 +93,6 @@ $(function () {
             show = false;
         }
     });
+    // wow animation
+    new WOW().init();
 });

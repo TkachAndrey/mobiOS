@@ -106,37 +106,9 @@
     font-weight: 700;
     text-transform: uppercase;
   }
-  &__lines{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 50%;
-    background-color: $borderColor;
-    &::before{
-      content:"";
-      position: absolute;
-      display: block;
-      width: 2px;
-      height: 490px;
-      top: -245px;
-      left: 300px;
-      background-color: $borderColor;
-    }
-    &::after{
-      content:"";
-      position: absolute;
-      display: block;
-      width: 2px;
-      height: 490px;
-      top: -245px;
-      right: 300px;
-      background-color: $borderColor;
-    }
-  }
 
   &__title{
-    opacity: 0.05;
-    color: $mainColor;
+    color: rgba(34, 34, 34, .05);
     font-family: "A_Concepto";
     font-size: 118px;
     font-weight: 400;

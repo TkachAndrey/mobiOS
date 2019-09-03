@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="css/chosen.min.css"> -->
   <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/meanmenu.css" media="all" />
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 
@@ -192,19 +191,22 @@
   <!-- .top -->
   <section class="top">
     <div class="container">
-      <div class="top__slogan">
+      <div class="top__slogan wow fadeInUp"  data-wow-duration='1s' data-wow-delay='1s'>
         <div class="top__title-before">we are</div>
         <div class="top__title">providing service which amplify</div>
         <div class="top__title-after">your business opportunity</div>
       </div>
     </div>
+    <video  loop="loop" autoplay="" class="top__video">
+      <source src="images/Video dlya saita.webm"  type='video/webm'>
+    </video>
   </section>
 
   <!-- .goods -->
   <section class="goods">
     <div class="container">
       <div class="goods__inner">
-        <p class="goods__text">Full range of purchase and shipment of goods</p>
+        <p class="goods__text wow slideInLeft" data-wow-duration='2s'>Full range of purchase and shipment of goods</p>
 
         <div class="goods__products">
           <div class="goods__products-wrapper goods__products-wrapper_grain">
@@ -316,7 +318,7 @@
           </div>
         </div>
 
-        <div class="goods__title">Products</div>
+        <div class="goods__title wow rotateInDownLeft" data-wow-delay='.8s'>Products</div>
       </div>
     </div>
   </section>
@@ -325,8 +327,7 @@
   <section class="work">
     <div class="container">
       <div class="work__inner">
-        <div class="work__demo">
-
+        <div class="work__demo wow bounceInLeft" data-wow-delay=".7s" data-wow-duration="2s">
           <div class="slider">
             <div class="slide__item">
               <img src="images/slide1.jpg" alt="">
@@ -389,8 +390,8 @@
           </div>
         </div>
 
-        <div class="work__process">
-          <div class="work__title">Work process</div>
+        <div class="work__process wow bounceInRight" data-wow-delay=".7s" data-wow-duration="2s">
+          <div class="work__title wow shake" data-wow-duration="3s" data-wow-delay="1s">Work process</div>
           <div class="work__steps">
             <div class="work__steps-item work__steps-item_1">
               <span class="work__steps-digit">1</span>
@@ -750,6 +751,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.spincrement.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

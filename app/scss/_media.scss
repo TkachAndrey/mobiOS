@@ -139,6 +139,17 @@
     min-height: 250px;
     background-position: right bottom;
     background-size: cover;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: 1;
+    }
     &__slogan{
       margin-top: 50px;
     }
@@ -156,6 +167,9 @@
       &-after {
         font-size: 17px;
       }
+    }
+    &__video{
+      display: none;
     }
   }
   .goods {
@@ -799,7 +813,6 @@
 // //////////////////////////////////////////
 @media (min-width: 992px) {
   .header {
-    background-size: cover;
     &__nav {
       display: block;
       &-mob {
@@ -825,8 +838,13 @@
   }
   .top {
     min-height: 100vh;
+    background-image: none;
+    overflow: hidden;
     background-size: cover;
-    background-attachment: fixed;
+    &__slogan{
+      position: relative;
+      z-index: 3;
+    }
     &__title {
       font-size: 30px;
       line-height: 24px;
@@ -841,6 +859,17 @@
       &-after {
         font-size: 50px;
       }
+    }
+    &__video{
+      display: block;
+      left: 0;
+      top: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      position: absolute;
     }
   }
   .global{
