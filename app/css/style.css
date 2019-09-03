@@ -699,6 +699,7 @@ img {
   font-family: "A_Concepto";
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 .slide__item {
@@ -760,6 +761,20 @@ img {
   text-transform: uppercase;
   margin-bottom: 80px;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.global__title .letters {
+  position: relative;
+  padding-top: 0.4em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+}
+
+.global__title .letters span {
+  display: inline-block;
+  line-height: 60px;
 }
 
 .global__map {

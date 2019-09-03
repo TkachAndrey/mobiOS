@@ -95,4 +95,28 @@ $(function () {
     });
     // wow animation
     new WOW().init();
+    // moving letter animation
+    var textWrapper = document.querySelector('.global__title .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.global__title .letter',
+        translateY: ["1.1em", 0],
+        translateZ: 0,
+        duration: 750,
+        delay: (el, i) => 50 * i
+      }).add({
+        targets: '.global__title',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+
+      // PopUp modal window
+      $('.form').on('submit', function(e){
+        $('#myModal').modal('show');
+        e.preventDefault();
+      });
 });

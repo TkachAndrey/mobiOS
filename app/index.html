@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
@@ -191,13 +192,13 @@
   <!-- .top -->
   <section class="top">
     <div class="container">
-      <div class="top__slogan wow fadeInUp"  data-wow-duration='1s' data-wow-delay='1s'>
+      <div class="top__slogan wow fadeInUp" data-wow-duration='1s' data-wow-delay='1s'>
         <div class="top__title-before">we are</div>
         <div class="top__title">providing service which amplify</div>
         <div class="top__title-after">your business opportunity</div>
       </div>
     </div>
-    <video  loop="loop" autoplay="" class="top__video">
+    <video loop="loop" autoplay class="top__video">
       <source src="images/Video dlya saita.webm"  type='video/webm'>
     </video>
   </section>
@@ -327,7 +328,7 @@
   <section class="work">
     <div class="container">
       <div class="work__inner">
-        <div class="work__demo wow bounceInLeft" data-wow-delay=".7s" data-wow-duration="2s">
+        <div class="work__demo wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
           <div class="slider">
             <div class="slide__item">
               <img src="images/slide1.jpg" alt="">
@@ -389,9 +390,8 @@
             </div>
           </div>
         </div>
-
-        <div class="work__process wow bounceInRight" data-wow-delay=".7s" data-wow-duration="2s">
-          <div class="work__title wow shake" data-wow-duration="3s" data-wow-delay="1s">Work process</div>
+        <div class="work__process wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
+          <div class="work__title wow shake">Work process</div>
           <div class="work__steps">
             <div class="work__steps-item work__steps-item_1">
               <span class="work__steps-digit">1</span>
@@ -437,38 +437,15 @@
   <!-- .global -->
   <section class="global">
     <div class="container">
-      <div class="global__title">Our global trade</div>
-      <!-- <div class="global__points">
-        <input type="radio" name="country" id="Ukraine" checked="checked">
-        <input type="radio" name="country" id="Russia">
-        <input type="radio" name="country" id="Canada">
-        <input type="radio" name="country" id="Moldova">
-        <input type="radio" name="country" id="Kazakhstan">
-        <input type="radio" name="country" id="Spain-O">
-        <input type="radio" name="country" id="Spain-C">
-        <input type="radio" name="country" id="Poland">
-        <input type="radio" name="country" id="Italy">
-        <input type="radio" name="country" id="Kuwait">
-        <input type="radio" name="country" id="Morocco">
-        <input type="radio" name="country" id="Algeria">
-        <input type="radio" name="country" id="Qatar">
-        <input type="radio" name="country" id="Tailand">
-        <input type="radio" name="country" id="India">
-        <input type="radio" name="country" id="Germany">
-        <input type="radio" name="country" id="Portugal">
-        <input type="radio" name="country" id="Jordan">
-        <input type="radio" name="country" id="Lebanon">
-        <input type="radio" name="country" id="Pakistan">
-        <input type="radio" name="country" id="Egypt">
-        <input type="radio" name="country" id="Sri Lanka">
-        <input type="radio" name="country" id="UAE">
-        <input type="radio" name="country" id="Indonesia">
-      </div> -->
+      <div class="global__title">
+        <span class="global__title-wrapper">
+          <span class="letters">
+            <span>O</span><span>u</span><span>r</span> <span>g</span><span>l</span><span>o</span><span>b</span><span>a</span><span>l</span> <span>t</span><span>r</span><span>a</span><span>d</span><span>e</span>
+          </span>
+        </span>
+      </div>
       <div class="global__map">
         <img src="images/map.svg" alt="">
-        <!-- <div class="global__map-marker">
-          <img src="images/map-marker.svg" alt="">
-        </div> -->
       </div>
     </div>
   </section>
@@ -477,7 +454,7 @@
   <section class="countries">
     <div class="container">
       <div class="countries__inner">
-        <div class="countries__origin">
+        <div class="countries__origin wow bounceInLeft" data-wow-delay="1s" data-wow-duration="2s">
           <div class="countries__origin-title">Countries of origin</div>
           <ul class="countries__origin-list">
             <li class="countries__origin-item"><label for="Ukraine">Ukraine</label></li>
@@ -488,7 +465,7 @@
             <li class="countries__origin-item"><label for="Spain-O">Spain</label></li>
           </ul>
         </div>
-        <div class="countries__customers">
+        <div class="countries__customers wow bounceInRight" data-wow-delay="1s" data-wow-duration="2s">
           <div class="countries__customers-title">customers</div>
           <ul class="countries__customers-list">
             <li class="countries__customers-item"><label for="Spain-C">Spain</label></li>
@@ -533,10 +510,10 @@
         <div class="about__equis">
           <div class="about__equis-title">About equis</div>
           <div class="about__equis-text">
-            <p>We are a leading global Agri-Commodity trading and processing company specializing in the physical
+            <p class="wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s">We are a leading global Agri-Commodity trading and processing company specializing in the physical
               trading of various agricultural commodities such as pulses, wheat, rice, oilseeds, sugar, cotton and
               edible nuts.</p>
-            <p>Agrocorp’s beginnings can be traced back to 1990, where we operated from shared office spaces in
+            <p class="wow fadeInUp" data-wow-delay="2s" data-wow-duration="2s">Agrocorp’s beginnings can be traced back to 1990, where we operated from shared office spaces in
               Singapore trading mono-sodium glutamate and galvanised iron to Myanmar with a startup capital of
               SGD25,000.</p>
             <a href="#!" class="about__equis-link"><span>Read more</span></a>
@@ -552,18 +529,18 @@
       <div class="feedback__title">feedback</div>
       <p class="feedback__text">For more information, leave a request and we will contact you</p>
       <div class="feedback__inner">
-        <div class="feedback__form">
+        <div class="feedback__form wow bounceInLeft" data-wow-delay=".5s" data-wow-duration="2s">
           <form class="form" action="#">
             <p>Your information:</p>
             <div class="form__info">
-              <input type="text" placeholder="Company name" required>
-              <input type="tel" placeholder="Your phone" required>
-              <input type="text" placeholder="Your name" required>
+              <input type="text" placeholder="Company name">
+              <input type="tel" placeholder="Your phone">
+              <input type="text" placeholder="Your name" req>
               <input type="email" placeholder="Your e-mail" required>
             </div>
             <p>What you need?</p>
             <div class="form__needs">
-              <select name="product" class="form__needs-list form__needs-list_products">
+              <select name="product" class="form__needs-list form__needs-list_products" required>
                 <option disabled selected>Choose type of product</option>
                 <option value="Wheat">Wheat</option>
                 <option value="Barley">Barley</option>
@@ -621,10 +598,10 @@
             <input type="text" placeholder="Port / Place" class="form__delivery-place" id="portName" disabled>
             <textarea placeholder="Additional information"></textarea>
             <!-- <input type="submit" value="submit" class="form__submit"> -->
-            <button type="submit" class="form__submit"><span>submit</span></button>
+            <button type="submit" class="form__submit" id=""><span>submit</span></button>
           </form>
         </div>
-        <div class="feedback__image">
+        <div class="feedback__image wow bounceInRight" data-wow-delay=".5s" data-wow-duration="2s">
           <img src="images/feedback-img.png" alt="">
         </div>
       </div>
@@ -683,7 +660,7 @@
           </div>
         </div>
       </div>
-      <div class="footer__products">
+      <div class="footer__products wow fadeInDown" data-wow-delay="1s">
         <div class="footer__products-box">
           <div class="footer__products-title">Grains</div>
           <ul class="footer__products-list">
@@ -751,7 +728,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.spincrement.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>
